@@ -15,9 +15,14 @@
     color: hsl(0, 6%, 24%)
 }
 .photo {
-    display: block;
-    height: auto;
-    width: 100%;
+    
+    display: inline-block;
+        height: 240px;
+        width: 100%;
+        background: url('../images/hero-mobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    
 }
 .logo {
     max-height: 1.5rem;
@@ -30,7 +35,7 @@ nav {
 main {
     margin-top: 4rem;
     display: grid;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
 }
 .title{
     text-transform: uppercase;
@@ -93,12 +98,83 @@ button {
     
 }
 footer {
-    font-size: .75rem;
-    padding: 1rem;
+    font-size: .85rem;
     color: rgba(0, 0, 0, 0.85);
-    
 }
 a {
     text-decoration: none;
     color:hsl(0, 36%, 70%);
+}
+
+@media (min-width: 850px) {
+    .wrapper {
+        display: grid;
+        grid-template-rows: 150px auto 40px;
+        grid-template-columns: 3fr 2fr;
+        grid-template-areas: "nav photo"
+                             "main  photo"
+                             " footer  photo";
+        
+        max-width: 100%;
+        height: 100vh;
+        margin-right: 0;
+        height: 100vh;
+
+    }
+    nav {
+        grid-area: nav;
+        align-self: left;
+        padding: 5.5rem;
+        
+    }
+    .logo {
+        max-height: 3.25rem;
+    }
+    .photo {
+        grid-area: photo;
+        grid-row: 1 / -1;
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        background: url('../images/hero-desktop.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    main {
+        grid-area: main;
+        display: grid;
+        grid-template-rows: auto 1fr 1fr; 
+        padding: 3.5rem;
+        padding-left: 5.5rem;
+        padding-right: 5rem;
+        text-align: left;
+        margin-top: 0;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .description, .form-fields {
+        padding: 3.5rem 3.5rem 0 0;
+        margin-left: 0;
+        margin-right: 4.5rem;
+        
+    }
+    .description {
+        font-size: 1rem;
+        letter-spacing: 0; 
+    }
+    button {
+        padding: 1rem 2.75rem;
+    }
+    input[type=email] {
+        padding: 1.1rem;
+        padding-left: 2rem;
+        border: 1px solid  linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    }  
+
+    footer {
+        grid-area: footer;
+        grid-row: 5/-1;
+        margin-bottom: 0;
+    }
 }
