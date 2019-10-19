@@ -25,7 +25,7 @@
     
 }
 .logo {
-    max-height: 1.5rem;
+    max-height: 1.5em;
 }
 nav {
     display: grid;
@@ -35,11 +35,11 @@ nav {
 main {
     margin-top: 4rem;
     display: grid;
-    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
 }
 .title{
     text-transform: uppercase;
-    font-size: 1.6rem;
+    font-size: 1.6em;
     grid-row: 1/ 2;
     line-height: 1.1;
 }
@@ -54,7 +54,7 @@ h1 {
     grid-row: 2 / span 1;
     padding: 1rem .8rem 0;
     font-weight: 600;
-    font-size: 0.8rem;
+    font-size: 0.8em;
     line-height: 1.75;
     color:hsl(0, 36%, 70%);
     letter-spacing: 0.1em;
@@ -66,18 +66,18 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: 0 15px;
-    padding: 1rem .8rem 0;
+    padding: 1em .8em 0;
         
 }
 input[type=email] {
     display: inline-block;
     width: 100%;
-    padding: 1rem;
-    padding-left: 2rem;
+    padding: 1em;
+    padding-left: 2em;
     line-height: normal;
     border: 1px solid hsl(0, 36%, 70%);
     border-radius: 2rem 0 0 2rem;
-    font-size: 1rem;
+    font-size: 1em;
     overflow: visible;
 }
 input[type=email]::placeholder {
@@ -98,7 +98,7 @@ button {
     
 }
 footer {
-    font-size: .85rem;
+    font-size: .85em;
     color: rgba(0, 0, 0, 0.85);
 }
 a {
@@ -113,6 +113,7 @@ a {
         grid-template-columns: 3fr 2fr;
         grid-template-areas: "nav photo"
                              "main  photo"
+                           
                              " footer  photo";
         
         max-width: 100%;
@@ -124,57 +125,66 @@ a {
     nav {
         grid-area: nav;
         align-self: left;
-        padding: 5.5rem;
+        padding: 5.5em;
         
     }
     .logo {
-        max-height: 3.25rem;
+        max-height: 3.25em;
     }
     .photo {
         grid-area: photo;
-        grid-row: 1 / -1;
         display: inline-block;
         height: 100%;
         width: 100%;
         background: url('../images/hero-desktop.jpg');
         background-size: cover;
         background-repeat: no-repeat;
+        margin-bottom: -1px;
     }
     main {
         grid-area: main;
         display: grid;
-        grid-template-rows: auto 1fr 1fr; 
-        padding: 3.5rem;
-        padding-left: 5.5rem;
-        padding-right: 5rem;
+        grid-template-rows: repeat(3, auto); 
+        padding: 3.5em;
+        padding-left: 5.5em;
+        padding-right: 5em;
         text-align: left;
         margin-top: 0;
+        width: 80%;
     }
     h1 {
-        font-size: 4rem;
+        font-size: 2.5em;
     }
-    .description, .form-fields {
-        padding: 3.5rem 3.5rem 0 0;
-        margin-left: 0;
-        margin-right: 4.5rem;
-        
-    }
+    .title {
+        align-self: center;
+    }   
     .description {
-        font-size: 1rem;
+        font-size: 1em;
         letter-spacing: 0; 
+        padding: 2.5em 2.5em 0 0 0;
+        margin-left: 0;
+        letter-spacing: 0.1em;
     }
+    .form-fields {
+        padding-right: 1.5em;
+        margin-top: 0;
+         
+     }
     button {
-        padding: 1rem 2.75rem;
+        padding: 1.2em 2.75em;
     }
     input[type=email] {
-        padding: 1.1rem;
-        padding-left: 2rem;
+        padding: 1.1em;
+        padding-left: 2em;
         border: 1px solid  linear-gradient(135deg,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     }  
 
     footer {
         grid-area: footer;
-        grid-row: 5/-1;
+        grid-row: 3/-1;
         margin-bottom: 0;
+        padding-bottom: .75em;
+        text-align: left;
+        padding-left: 6.5em;
     }
 }
