@@ -1,2 +1,15 @@
 @import 'config';
+@import 'header';
 
+body {
+    background: #fff;
+    color: $dark-grayish-blue;
+    font-family: $body-font-family;
+    font-weight: 400;
+    font-size: $body-font-size;
+}
+h1, h2, h3 {
+    font-family: $font-family;
+    text-transform: uppercase;
+    
+}
