@@ -1,0 +1,34 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    
+    
+    li {
+        list-style-type: none;
+        padding: 0 .7rem;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+    
+    .header-left {
+        width: 50%;
+        margin: 2.5rem;
+        ul {
+            justify-content: flex-start;
+        }
+    }
+    .header-right {
+        width: 50%;
+        background: $light-grayish-blue;
+        border-radius: 0 0 0 30%;
+        padding: 2.5rem;
+        a {
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@import 'config';
+@import 'header';
+
+body {
+    background: #fff;
+    color: $dark-grayish-blue;
+    font-family: $body-font-family;
+    font-weight: 400;
+    font-size: $body-font-size;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;   
+    
+}
+h1, h2, h3 {
+    font-family: $font-family;
+    text-transform: uppercase;
+    
+}
+.hero {
+    display: flex;
+    flex-direction: row; 
+
+    margin-top: -17rem;
+    padding-bottom: 50px;
+    .hero-left, .hero-right {
+        margin: 2rem auto;
+        width: 50%;
+
+        img {
+            width: 100%;
+            margin: 1.5rem auto;
+            padding-left: 2rem;
+        }
+    }
+    .hero-left {
+        margin: 2rem auto;
+        padding: 4rem;
+        letter-spacing: 3px;        
+        .blue {
+            display:inline-block;
+            background: $dark-blue;
+            color: white;
+            padding: 2px 13px;
+            border-radius: 25px;
+            font-weight: normal;
+            margin-right: .75rem;
+        }
+        h2 {
+            color: $grayish-blue;
+            font-weight: lighter;
+        }
+        h1 {
+            display: inline-block;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: $dark-blue;
+            letter-spacing: 2px;
+            font-size: 3rem;
+            line-height: .9;
+        }
+        p {
+            display: inline-block;
+            margin-top: 2.5rem;
+            margin-bottom: 2rem;
+            padding-right: 6rem;
+        }
+        .demo {
+            display: flex;
+            flex-direction: row;
+            margin-top: 2rem;
+            align-items: baseline;
+            button.btn-red {
+                display: inline-block;
+                background: $primary-color;
+                color: #fff;
+                padding: 10px 15px;
+                border-radius: 4px;
+                text-transform: uppercase;
+                border: none;
+                outline: none;
+                margin-right: 1rem;
+                letter-spacing: 2px;
+    
+            }
+            h2 {
+                font-size: $body-font-size;
+            }
+        }
+        
+    }
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 50px;    
+    text-align: center;
+    
+}
