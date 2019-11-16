@@ -1,7 +1,8 @@
 .header {
     display: flex;
     flex-direction: row;
-    height: 70vh;
+    height: 50vh;
+    
     
     li {
         list-style-type: none;
@@ -16,7 +17,7 @@
     
     .header-left {
         width: 50%;
-        margin: 2rem;
+        margin: 2.5rem;
         ul {
             justify-content: flex-start;
         }
@@ -25,13 +26,9 @@
         width: 50%;
         background: $light-grayish-blue;
         border-radius: 0 0 0 30%;
-        padding: 2rem;
+        padding: 2.5rem;
         a {
             text-transform: uppercase;
-            color: $dark-blue;
-            text-decoration: none;
-            font-weight: 700;
-            font-family: $font-family;
         }
     }
 }
